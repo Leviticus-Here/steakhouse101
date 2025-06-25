@@ -1,0 +1,6 @@
+/* src/components/Hero.css */
+.hero {
+    background: url('/steak-bg.jpg') center/cover no-repeat;
+    height: 90vh;
+  }
+  
