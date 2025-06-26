@@ -12,6 +12,7 @@
 .nav-link {
   padding: 0.5rem 1rem;
   transition: color 0.3s ease;
+  color: #ffffff;
 }
 
 .nav-link:hover {
