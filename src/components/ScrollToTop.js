@@ -1,12 +1,12 @@
-// src/components/ScrollToTop.js
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ScrollToTop.css';
 
 const ScrollToTop = () => {
   const [visible, setVisible] = useState(false);
 
   const toggleVisible = () => {
-    setVisible(window.scrollY > 300);
+    const scrolled = document.documentElement.scrollTop;
+    setVisible(scrolled > 300);
   };
 
   const scrollToTop = () => {
@@ -14,17 +14,17 @@ const ScrollToTop = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisible);
-    return () => window.removeEventListener("scroll", toggleVisible);
+    window.addEventListener('scroll', toggleVisible);
+    return () => window.removeEventListener('scroll', toggleVisible);
   }, []);
 
   return (
     <button
-      className={`scroll-to-top ${visible ? "show" : ""}`}
+      className={`scroll-to-top ${visible ? 'visible' : ''}`}
       onClick={scrollToTop}
       aria-label="Scroll to top"
     >
-      ↑
+      ⬆️
     </button>
   );
 };

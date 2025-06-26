@@ -19,8 +19,9 @@ function App() {
       <MenuGallery />
       <ReservationForm />
       <FAQ />
-      <ScrollToTop />
       <Footer />
+      {/* other components */}
+      <ScrollToTop />
     </>
   );
 }
