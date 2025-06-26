@@ -1,6 +1,7 @@
 {
   "name": "steakhouse101",
   "version": "0.1.0",
+  "homepage": "https://yourusername.github.io/steakhouse101",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
