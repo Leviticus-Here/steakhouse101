@@ -1,5 +1,5 @@
 // src/components/ReservationForm.js
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const ReservationForm = () => {
   const [form, setForm] = useState({
