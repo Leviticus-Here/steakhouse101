@@ -1,6 +1,5 @@
-/* src/components/Hero.css */
 .hero {
-    background: url('/images/hero-steak.jpg') center center/cover no-repeat;
+    /* background: url('/images/hero-steak.jpg') center center/cover no-repeat; */
     height: 90vh;
     display: flex;
     align-items: center;
