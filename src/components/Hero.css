@@ -41,7 +41,7 @@
   
   .hero button {
     padding: 0.75rem 2rem;
-    background-color: #919191;
+    background-color: #e67e22;
     border: none;
     border-radius: 25px;
     color: #fff;
@@ -51,6 +51,6 @@
   }
   
   .hero button:hover {
-    background-color: #502424;
+    background-color: #d35400;
   }
   

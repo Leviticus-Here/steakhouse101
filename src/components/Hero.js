@@ -1,12 +1,13 @@
 import React from 'react';
-import './Hero.css'; // keep for layout, padding, etc.
+import './Hero.css';
+import backgroundimg from '../assets/steakhouse-101-background.jpg';
 
 const Hero = () => {
   return (
     <section
       className="hero"
       style={{
-        backgroundImage: "url('/images/hero-steak.jpg')",
+        backgroundImage: `url(${backgroundimg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
