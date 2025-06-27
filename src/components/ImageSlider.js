@@ -2,9 +2,9 @@
 import React from 'react';
 
 const slides = [
-  { src: "public/images/Signature-Ribeye.jpg", caption: "Signature Ribeye" },
-  { src: "public/images/Elegant-Ambience", caption: "Elegant Ambience" },
-  { src: "public/images/Sizziling-Sirloin", caption: "Sizzling Sirloin" },
+  { src: "/images/Signature-Ribeye.jpg", caption: "Signature Ribeye" },
+  { src: "/images/Elegant-Ambience", caption: "Elegant Ambience" },
+  { src: "/images/Sizziling-Sirloin", caption: "Sizzling Sirloin" },
 ];
 
 const ImageSlider = () => (
