@@ -1,4 +1,4 @@
-// src/components/contact.js
+// src/components/Contact.js
 import React from 'react';
 
 const Contact = () => {
