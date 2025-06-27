@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -15,29 +14,17 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <>
       <Navbar />
-      <ScrollToTop />
-
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              <ImageSlider />
-              <MenuGallery />
-              <ReservationForm />
-              <FAQ />
-            </>
-          }
-        />
-        <Route path="/contact" element={<Contact />} />
-        {/* Add more pages/routes here */}
-      </Routes>
-
+      <Hero />
+      <ImageSlider />
+      <MenuGallery />
+      <ReservationForm />
+      <FAQ />
+      <Contact />
       <Footer />
-    </Router>
+      <ScrollToTop />
+    </>
   );
 }
 
