@@ -1,10 +1,13 @@
 // src/components/MenuGallery.js
 import React from 'react';
+import ribeyesteakImg from '../assets/Ribeye-Steak.jpg';
+import filetmignonImg from '../assets/Filet-Mignon.jpg';
+import sirloinsteakImg from '../assets/Sirloin-Steak.jpg';
 
 const menuItems = [
-  { name: "Ribeye", image: "/ribeye.jpg", desc: "Juicy and flavorful." },
-  { name: "Filet Mignon", image: "/filet.jpg", desc: "Tender and elegant." },
-  { name: "Sirloin", image: "/sirloin.jpg", desc: "Classic cut with bold taste." },
+  { src: ribeyesteakImg, caption: "Signature Ribeye" },
+  { src: filetmignonImg, caption: "Elegant Ambience" },
+  { src: sirloinsteakImg, caption: "Sizzling Sirloin" },
 ];
 
 const MenuGallery = () => (
