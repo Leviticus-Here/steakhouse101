@@ -3,8 +3,8 @@ import React from 'react';
 
 const slides = [
   { src: "/images/Signature-Ribeye.jpg", caption: "Signature Ribeye" },
-  { src: "/images/Elegant-Ambience", caption: "Elegant Ambience" },
-  { src: "/images/Sizziling-Sirloin", caption: "Sizzling Sirloin" },
+  { src: "/images/Elegant-Ambience.jpg", caption: "Elegant Ambience" },
+  { src: "/images/Sizzling-Sirloin.jpg", caption: "Sizzling Sirloin" },
 ];
 
 const ImageSlider = () => (
