@@ -55,3 +55,11 @@ a:hover {
   }
 
 }
+
+.image-slider {
+  border: 3px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin-top: 2rem; /* optional spacing from hero */
+}

@@ -17,6 +17,10 @@
     justify-content: center;
     color: #fff;
     text-align: center;
+    border: 3px solid rgb(192, 192, 192);
+    border-radius: 8px;
+    padding: 1rem;
+    box-sizing: border-box;
   }
   
   .hero::before {
