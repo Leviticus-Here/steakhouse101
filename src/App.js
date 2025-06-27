@@ -26,6 +26,13 @@ function App() {
       <Footer />
       {/* other components */}
       <ScrollToTop />
+      <Router>
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/Contact" element={<Contact />} />
+        {/* Add more pages here */}
+      </Routes>
+    </Router>
     </>
   );
 }
