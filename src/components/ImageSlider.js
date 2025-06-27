@@ -1,10 +1,13 @@
 // src/components/ImageSlider.js
 import React from 'react';
+import ribeyeImg from '../assets/Signature-Ribeye.jpg';
+import ambienceImg from '../assets/Elegant-Ambience.jpg';
+import sirloinImg from '../assets/Sizzling-Sirloin.jpg';
 
 const slides = [
-  { src: "/assets/Signature-Ribeye.jpg", caption: "Signature Ribeye" },
-  { src: "/assets/Elegant-Ambience.jpg", caption: "Elegant Ambience" },
-  { src: "/assets/Sizzling-Sirloin.jpg", caption: "Sizzling Sirloin" },
+  { src: ribeyeImg, caption: "Signature Ribeye" },
+  { src: ambienceImg, caption: "Elegant Ambience" },
+  { src: sirloinImg, caption: "Sizzling Sirloin" },
 ];
 
 const ImageSlider = () => (
