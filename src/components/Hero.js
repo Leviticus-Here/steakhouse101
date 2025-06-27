@@ -11,6 +11,7 @@ const Hero = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        marginBottom: '3rem'
       }}
     >
       <div>
