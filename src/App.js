@@ -1,10 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-<<<<<<< HEAD
-=======
-import Contact from './components/Contact';
->>>>>>> c1c45d7cc223bf85a8e468e33ca7662061f51ac9
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Contact from './contact-page/Contact';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MenuGallery from './components/MenuGallery';
@@ -18,7 +16,13 @@ import './App.css';
 function App() {
   return (
     <>
+    <Router>
       <Navbar />
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
       <Hero />
       <ImageSlider />
       <MenuGallery />

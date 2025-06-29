@@ -1,23 +1,35 @@
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault(); // Stop default form submission
+import React, { useState } from 'react';
 
-  // Get form values
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-  const responseDiv = document.getElementById('responseMessage');
+const Contact = () => {
+  const [response, setResponse] = useState('');
 
-  // Simple validation
-  if (name === '' || email === '' || message === '') {
-    responseDiv.style.color = 'red';
-    responseDiv.textContent = 'Please fill out all fields.';
-    return;
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
 
-  // Show success message (you could also send data to a server here)
-  responseDiv.style.color = 'green';
-  responseDiv.textContent = `Thank you, ${name}! We'll get back to you soon.`;
+    if (!name || !email || !message) {
+      setResponse('Please fill out all fields.');
+      return;
+    }
 
-  // Optionally clear form
-  document.getElementById('contactForm').reset();
-});
+    setResponse(`Thank you, ${name}! We'll get back to you soon.`);
+    form.reset();
+  };
+
+  return (
+    <div>
+      <form id="contactForm" onSubmit={handleSubmit}>
+        <input name="name" placeholder="Name" />
+        <input name="email" placeholder="Email" />
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div id="responseMessage">{response}</div>
+    </div>
+  );
+};
+
+export default Contact;
