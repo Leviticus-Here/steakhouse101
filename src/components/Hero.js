@@ -1,20 +1,22 @@
 import React from 'react';
-import './Hero.css'; // keep for layout, padding, etc.
+import './Hero.css';
+import backgroundimg from '../assets/steakhouse-101-background.jpg';
 
 const Hero = () => {
   return (
     <section
       className="hero"
       style={{
-        backgroundImage: "url('/images/hero-steak.jpg')",
+        backgroundImage: `url(${backgroundimg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        marginBottom: '3rem'
       }}
     >
       <div>
         <h1>Welcome to Steakhouse 101</h1>
-        <p>Where flavor meets fire.</p>
+        <h2>Where flavor meets fire.</h2>
       </div>
     </section>
   );

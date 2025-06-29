@@ -1,8 +1,7 @@
-// src/components/Navbar.js
 import React from 'react';
 import './Navbar.css';
+import { Link, useLocation } from 'react-router-dom';
 
-// Define scrollToSection
 const scrollToSection = (id) => {
   const section = document.getElementById(id);
   if (section) {
@@ -10,22 +9,47 @@ const scrollToSection = (id) => {
   }
 };
 
-const Navbar = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div className="container">
-      <button className="nav-link" onClick={() => scrollToSection('home')}>Steakhouse 101</button>
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="nav">
-        <ul className="navbar-nav ms-auto">
-          <li className="nav-item"><a className="nav-link" href="#menu">Menu</a></li>
-          <li className="nav-item"><a className="nav-link" href="#reservation">Reservation</a></li>
-          <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
-        </ul>
+const Navbar = () => {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  return (
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div className="container">
+        <button className="nav-link btn btn-link text-white text-decoration-none" onClick={() => scrollToSection('home')}>
+          Steakhouse 101
+        </button>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="nav">
+          <ul className="navbar-nav ms-auto">
+            {isHome ? (
+              <>
+                <li className="nav-item">
+                  <button className="nav-link btn btn-link text-white text-decoration-none" onClick={() => scrollToSection('menu')}>
+                    Menu
+                  </button>
+                </li>
+                <li className="nav-item">
+                  <button className="nav-link btn btn-link text-white text-decoration-none" onClick={() => scrollToSection('reservation')}>
+                    Reservation
+                  </button>
+                </li>
+              </>
+            ) : (
+              <li className="nav-item">
+                <Link className="nav-link" to="/hero">Back to Hero</Link>
+              </li>
+            )}
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-);
+    </nav>
+  );
+};
 
 export default Navbar;

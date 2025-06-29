@@ -1,10 +1,25 @@
 // src/components/MenuGallery.js
 import React from 'react';
+import ribeyesteakImg from '../assets/Ribeye-Steak.jpg';
+import filetmignonImg from '../assets/Filet-Mignon.jpg';
+import sirloinsteakImg from '../assets/Sirloin-Steak.jpg';
 
 const menuItems = [
-  { name: "Ribeye", image: "/ribeye.jpg", desc: "Juicy and flavorful." },
-  { name: "Filet Mignon", image: "/filet.jpg", desc: "Tender and elegant." },
-  { name: "Sirloin", image: "/sirloin.jpg", desc: "Classic cut with bold taste." },
+  {
+    src: ribeyesteakImg,
+    caption: "Signature Ribeye",
+    desc: "Juicy ribeye steak cooked to perfection."
+  },
+  {
+    src: filetmignonImg,
+    caption: "Filet Mignon",
+    desc: "Tender filet mignon with elegant seasoning."
+  },
+  {
+    src: sirloinsteakImg,
+    caption: "Sizzling Sirloin",
+    desc: "Sizzling sirloin with rich flavor."
+  },
 ];
 
 const MenuGallery = () => (
@@ -15,10 +30,10 @@ const MenuGallery = () => (
         {menuItems.map((item, i) => (
           <div className="col-md-4" key={i}>
             <div className="card mb-4 shadow-sm">
-              <img src={item.image} alt={item.name} className="card-img-top" />
+              <img src={item.src} alt={item.caption} className="card-img-top" />
               <div className="card-body">
-                <h5>{item.name}</h5>
-                <p>{item.desc}</p>
+                <h5>{item.caption}</h5>
+                {/* Add a description here if you want */}
               </div>
             </div>
           </div>

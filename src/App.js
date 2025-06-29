@@ -1,7 +1,10 @@
-// src/App.js
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+<<<<<<< HEAD
+=======
+import Contact from './components/Contact';
+>>>>>>> c1c45d7cc223bf85a8e468e33ca7662061f51ac9
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MenuGallery from './components/MenuGallery';
@@ -21,12 +24,11 @@ function App() {
       <MenuGallery />
       <ReservationForm />
       <FAQ />
+      <Contact />
       <Footer />
-      {/* other components */}
       <ScrollToTop />
     </>
   );
 }
 
 export default App;
-

@@ -1,10 +1,13 @@
 // src/components/ImageSlider.js
 import React from 'react';
+import ribeyeImg from '../assets/Signature-Ribeye.jpg';
+import ambienceImg from '../assets/Elegant-Ambience.jpg';
+import sirloinImg from '../assets/Sizzling-Sirloin.jpg';
 
 const slides = [
-  { src: "/slider1.jpg", caption: "Signature Ribeye" },
-  { src: "/slider2.jpg", caption: "Elegant Ambience" },
-  { src: "/slider3.jpg", caption: "Sizzling Sirloin" },
+  { src: ribeyeImg, caption: "Signature Ribeye" },
+  { src: ambienceImg, caption: "Elegant Ambience" },
+  { src: sirloinImg, caption: "Sizzling Sirloin" },
 ];
 
 const ImageSlider = () => (
@@ -23,6 +26,9 @@ const ImageSlider = () => (
           </div>
         </div>
       ))}
+    </div>
+    <div style={{ border: '3px solid #333', borderRadius: '8px', padding: '1rem', marginTop: '2rem' }}>
+  {/* ImageSlider content */}
     </div>
     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span className="carousel-control-prev-icon" aria-hidden="true"></span>
