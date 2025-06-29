@@ -8,7 +8,7 @@ const menuItems = [
 ];
 
 const MenuGallery = () => (
-  <section id="menu" className="py-5 bg-light">
+  <section id="menu" className="py-5 bg-dark text-white">
     <div className="container">
       <h2 className="text-center mb-4">Our Signature Cuts</h2>
       <div className="row">

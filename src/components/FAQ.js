@@ -2,7 +2,7 @@
 import React from 'react';
 
 const FAQ = () => (
-  <section className="py-5 bg-light">
+  <section className="py-5 bg-dark grey text-white">
     <div className="container">
       <h2>Frequently Asked Questions</h2>
       <div className="accordion" id="faqAccordion">
