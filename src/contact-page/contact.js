@@ -23,7 +23,7 @@ const Contact = () => {
   return (
     <div className="contact-page">
       {/* Static Info Section */}
-      <section className="py-5 contact-info" style={{ backgroundColor: '#f8f9fa' }}>
+      <section className="py-5 contact-info" style={{ backgroundColor: '#dark' }}>
         <div className="container">
           <h2 className="mb-4">Contact Us</h2>
           <p>📞 <strong>Phone:</strong> (123) 456-7890</p>

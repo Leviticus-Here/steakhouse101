@@ -57,11 +57,11 @@ button:hover {
 
 .contact-info h2 {
   font-size: 2rem;
-  color: #333;
+  color: rgb(255, 255, 255);
 }
 
 .contact-form-section {
-  background-color: white;
+  background-color: rgb(51, 49, 49);
   padding: 40px 40px;
   display: flex;
   justify-content: center;
@@ -79,7 +79,7 @@ button:hover {
   padding: 12px;
   margin-bottom: 15px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 #contactForm button {
