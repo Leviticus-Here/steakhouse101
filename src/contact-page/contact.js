@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './contact.css'
+import './contact.css';
 
 const Contact = () => {
   const [response, setResponse] = useState('');
@@ -21,14 +21,33 @@ const Contact = () => {
   };
 
   return (
-    <div>
-      <form id="contactForm" onSubmit={handleSubmit}>
-        <input name="name" placeholder="Name" />
-        <input name="email" placeholder="Email" />
-        <textarea name="message" placeholder="Message"></textarea>
-        <button type="submit">Send</button>
-      </form>
-      <div id="responseMessage">{response}</div>
+    <div className="contact-page">
+      {/* Static Info Section */}
+      <section className="py-5 contact-info" style={{ backgroundColor: '#f8f9fa' }}>
+        <div className="container">
+          <h2 className="mb-4">Contact Us</h2>
+          <p>📞 <strong>Phone:</strong> (123) 456-7890</p>
+          <p>📧 <strong>Email:</strong> contact@steakhouse101.com</p>
+          <p>📍 <strong>Address:</strong> 101 Flame Grill St, Sizzle City, THE MOON</p>
+        </div>
+      </section>
+
+      {/* Form Section */}
+      <section className="contact-form-section">
+        <div className="container">
+          <form id="contactForm" onSubmit={handleSubmit}>
+            <input name="name" placeholder="Name" />
+            <input name="email" placeholder="Email" />
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+          </form>
+          {response && (
+            <div id="responseMessage" className={response.includes('Thank you') ? 'success' : 'error'}>
+              {response}
+            </div>
+          )}
+        </div>
+      </section>
     </div>
   );
 };

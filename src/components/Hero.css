@@ -1,59 +1,92 @@
+/* Hero Container */
 .hero {
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgb(255, 0, 0);
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Overlay for contrast */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.55); /* darker for readability */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Content container */
+.hero-content {
+  z-index: 2;
+  max-width: 700px;
+  padding: 1rem;
+}
+
+/* Headings */
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+  font-size: 1.75rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+/* CTA Button */
+.hero-button {
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #d62828;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #a71d2a;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.25rem;
   }
-  
-  .hero {
-    position: relative;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    border: 3px solid rgb(192, 192, 192);
-    border-radius: 8px;
-    padding: 1rem;
-    box-sizing: border-box;
+
+  .hero-content h2 {
+    font-size: 1.25rem;
   }
-  
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* overlay */
-    z-index: 1;
+
+  .hero-button {
+    font-size: 0.95rem;
+    padding: 0.65rem 1.5rem;
   }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 600px;
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.75rem;
   }
-  
-  .hero h1 {
-    font-size: 4rem;
-    letter-spacing: 3px;
-    margin-bottom: 1rem;
-    color: #fff;
+
+  .hero-content h2 {
+    font-size: 1rem;
   }
-  
-  .hero button {
-    padding: 0.75rem 2rem;
-    background-color: #e67e22;
-    border: none;
-    border-radius: 25px;
-    color: #fff;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .hero button:hover {
-    background-color: #d35400;
-  }
-  
+}

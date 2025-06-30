@@ -9,29 +9,40 @@ import MenuGallery from './components/MenuGallery';
 import ReservationForm from './components/ReservationForm';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
+// import ScrollToTop from './components/ScrollToTop';
 import ImageSlider from './components/ImageSlider';
 import './App.css';
 
 function App() {
   return (
-    <>
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <ImageSlider />
+              <MenuGallery />
+              <ReservationForm />
+              <FAQ />
+              <Footer />
+              {/* <ScrollToTop /> */}
+            </>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <>
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
       </Routes>
     </Router>
-      <Hero />
-      <ImageSlider />
-      <MenuGallery />
-      <ReservationForm />
-      <FAQ />
-      <Contact />
-      <Footer />
-      <ScrollToTop />
-    </>
   );
 }
 
