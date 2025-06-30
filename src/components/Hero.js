@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import backgroundimg from '../assets/steakhouse-101-background.jpg';
+import backgroundimg from '../assets/steak-bg.jpg';
 
 const Hero = () => {
   return (
