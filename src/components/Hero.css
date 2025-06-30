@@ -12,6 +12,9 @@
   color: white;
   text-align: center;
   overflow: hidden;
+  margin-bottom: 3rem;
+  border: #fff;
+  border-width: 1rem;
 }
 
 /* Overlay for contrast */
