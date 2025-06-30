@@ -27,7 +27,7 @@ const ImageSlider = () => (
         </div>
       ))}
     </div>
-    <div style={{ border: '3px solid #333', borderRadius: '8px', padding: '1rem', marginTop: '2rem' }}>
+    <div style={{ padding: '1rem', marginTop: '2rem' }}>
   {/* ImageSlider content */}
     </div>
     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

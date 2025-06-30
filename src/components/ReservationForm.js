@@ -23,7 +23,7 @@ const ReservationForm = () => {
   };
 
   return (
-    <section id="reservation" className="py-5">
+    <section id="reservation" className="py-5 bg-dark grey text-white">
       <div className="container">
         <h2 className="mb-4">Reserve Your Table</h2>
         <form onSubmit={handleSubmit}>
