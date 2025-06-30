@@ -2,7 +2,7 @@
 import React from 'react';
 import ribeyesteakImg from '../assets/Ribeye-Steak.jpg';
 import filetmignonImg from '../assets/Filet-Mignon.jpg';
-import sirloinsteakImg from '../assets/Sirloin-Steak.jpg';
+import sirloinsteakImg from '../assets/steak-bg.jpg';
 
 const menuItems = [
   {
